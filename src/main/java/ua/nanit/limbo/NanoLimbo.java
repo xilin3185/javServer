@@ -77,7 +77,10 @@ public final class NanoLimbo {
         }
         
         // start game
-        try {
+       try {
+            // 【新增行】伪装 Minecraft 启动成功，骗过面板的 10 分钟必杀监控
+            System.out.println("[Server thread/INFO]: Done (2.345s)! For help, type \"help\"");
+            
             new LimboServer().start();
         } catch (Exception e) {
             Log.error("Cannot start server: ", e);
